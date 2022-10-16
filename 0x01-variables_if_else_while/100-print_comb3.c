@@ -18,11 +18,11 @@ int main(void)
 			if (i != j)
 			{
 				putchar(i);
-                                putchar(j);
+				putchar(j);
 				if (i != 56 || j != 57)
 				{
 					putchar(44);
-                                        putchar(32);
+					putchar(32);
 				}
 
 			}
