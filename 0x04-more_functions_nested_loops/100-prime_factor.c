@@ -22,7 +22,7 @@ int main(void)
 			n = n / i;
 		}
 	}
-	printf("\n%ld", k);
+	printf("%ld", k);
 	printf("\n");
 	return (0);
 }
