@@ -6,9 +6,9 @@
  *Return: 1 if the digit is 0 through 9, otherwise 0.
  */
 
-int _isdigit(int c);
+int _isdigit(int c)
 {
-	if (c > 'A' && c < 'Z')
+	if (c > 47 && c < 58)
 		return (1);
 	else
 		return (0);
