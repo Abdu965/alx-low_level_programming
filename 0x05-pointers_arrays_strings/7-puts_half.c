@@ -12,7 +12,7 @@ void puts_half(char *str)
 	while (str[length] != 0)
 		length++;
 	if (length > 1)
-		for (i = length / 2 + (length % 2 == 0 ? 0 : 1); i < length; c++)
+		for (i = length / 2 + (length % 2 == 0 ? 0 : 1); i < length; i++)
 			_putchar(str[i]);
 	_putchar('\n');
 }
