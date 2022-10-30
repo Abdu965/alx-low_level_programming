@@ -1,32 +1,27 @@
-#include "main.h"
-
+#include"main.h"
 /**
- * _strncat - function
- *@dest: char
- *@src: char
- *@n: int
- *Return: char
+ * _strncpy - copy string
+ * @src: pointer of char
+ * @dest: pointer of char
+ * @n: integer
+ * Return: char
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
+	int i = 0;
 
-	i = 0;
-
-	while (dest[i] != '\0')
+	while (i < n && src[i] != '\0')
 	{
+		dest[i] = src[i];
 		i++;
 	}
-
-	j = 0;
-	while (src[j] != '\0' && j < n)
+	if (i < n)
 	{
-	dest[i] = src[j];
-	i++;
-	j++;
-	}
-	dest[i] = '\0';
+		for (; i < n; i++)
 
+		dest[i] = '\0';
+
+	}
 	return (dest);
 }
