@@ -1,19 +1,25 @@
-#include"main.h"
+#include "main.h"
 /**
- * string_toupper - fonction toupper
- * @a: pointer
- * Return: pointer in return
+ * *cap_string - function
+ * @str: Pointer
+ * Return: poniter return to function.
  */
-char *string_toupper(char *a)
-{
-	int i;
 
-	for (i = 0; a[i] != 0; i++)
+char *cap_string(char *str)
+{
+	int symb[14] = {' ', '\t', '\n', ',', ';', '.', '!',
+		'?', '"', '(', ')', '{', '}'};
+	int i, j;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (a[i] > 90 && a[i] != 10)
+		if (str[0] >= 97 && str[0] <= 122)
 	{
-		a[i] = a[i] - 32;
+			str[0] = str[0] - 32;
 	}
+	for (j = 0; j < 14; j++)
+		if (str[i] >= 97 && str[i] <= 122 && str[i - 1] == symb[j])
+			str[i] = str[i] - 32;
 	}
-	return (a);
+	return (str);
 }
