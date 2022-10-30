@@ -1,25 +1,32 @@
 #include "main.h"
 /**
- * *cap_string - function
- * @str: Pointer
- * Return: poniter return to function.
+ *leet - a function that encodes a string into 1337.
+ *@s: string to be crypted .
+ *Return: pointer to s .
+ *Update V 1.0 : In this new code , i changed 2 arrays with 2 pointers, that
+ *are pointed to the BASS adresses of the 2 arrays.
+ *in addition to that , i assigned a pointer p to s.
  */
 
-char *cap_string(char *str)
+char *leet(char *s)
 {
-	int symb[14] = {' ', '\t', '\n', ',', ';', '.', '!',
-		'?', '"', '(', ')', '{', '}'};
-	int i, j;
+	char *m = "aeotl";
+	char *M = "AEOTL";
+	int x[] = {'4', '3', '0', '7', '1'};
+	int i;
+	char *p = s;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*s != '\0')
 	{
-		if (str[0] >= 97 && str[0] <= 122)
+
+	for (i = 0; i < 5; i++)
 	{
-			str[0] = str[0] - 32;
+		if (*s == *(m + i) || *s == *(M + i))
+
+			*s = x[i];
 	}
-	for (j = 0; j < 14; j++)
-		if (str[i] >= 97 && str[i] <= 122 && str[i - 1] == symb[j])
-			str[i] = str[i] - 32;
+		s++;
+
 	}
-	return (str);
+		return (p);
 }
