@@ -1,23 +1,19 @@
-#include "main.h"
-#include <stdio.h>
+#include"main.h"
 /**
- * reverse_array - reversing function.
+ * string_toupper - fonction toupper
  * @a: pointer
- * @n: pointer
- * Return: No return
+ * Return: pointer in return
  */
-void reverse_array(int *a, int n)
+char *string_toupper(char *a)
 {
-	int i, j, d;
+	int i;
 
-	if (n % 2 != 0)
-		d = n + 1;
-	else
-		d = n;
-	for (i = 0; i < d / 2; i++)
+	for (i = 0; a[i] != 0; i++)
 	{
-		j = a[i];
-		a[i] = a[n - 1 - i];
-		a[n - 1 - i] = j;
+		if (a[i] > 90 && a[i] != 10)
+	{
+		a[i] = a[i] - 32;
 	}
+	}
+	return (a);
 }
