@@ -1,23 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 /**
- *_strcmp - function comparison of strings
- *@s1:  pointer
- *@s2:  pointer
- *Return: j-integer
+ * reverse_array - reversing function.
+ * @a: pointer
+ * @n: pointer
+ * Return: No return
  */
-int _strcmp(char *s1, char *s2)
+void reverse_array(int *a, int n)
 {
-	int i, j;
+	int i, j, d;
 
-	j = 0;
-
-	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	if (n % 2 != 0)
+		d = n + 1;
+	else
+		d = n;
+	for (i = 0; i < d / 2; i++)
 	{
-		if (s1[i] != s2[i])
-	{
-		j = s1[i] - s2[i];
-		break;
+		j = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = j;
 	}
-	}
-		return (j);
 }
