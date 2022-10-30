@@ -1,27 +1,23 @@
-#include"main.h"
+#include "main.h"
 /**
- * _strncpy - copy string
- * @src: pointer of char
- * @dest: pointer of char
- * @n: integer
- * Return: char
+ *_strcmp - function comparison of strings
+ *@s1:  pointer
+ *@s2:  pointer
+ *Return: j-integer
  */
-
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int i, j;
 
-	while (i < n && src[i] != '\0')
+	j = 0;
+
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (i < n)
+		if (s1[i] != s2[i])
 	{
-		for (; i < n; i++)
-
-		dest[i] = '\0';
-
+		j = s1[i] - s2[i];
+		break;
 	}
-	return (dest);
+	}
+		return (j);
 }
